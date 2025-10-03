@@ -24,5 +24,17 @@ class NoSteve extends PluginBase implements Listener
             $event->setCancelled();
             $event->setKickMessage(TextFormat::RED."禁止Steve加入游戏\n\n出错了");
         }
+
+        if (strtolower($event->getPlayer()->getName()) === 'nazi')
+        {//防止某些人用纳粹和希特勒取名
+            $event->setCancelled();
+            $event->setKickMessage(TextFormat::RED."此用户名摄政敏感\n\n出错了");
+        }
+
+        if (strtolower($event->getPlayer()->getName()) === 'hitler')
+        {//同上
+            $event->setCancelled();
+            $event->setKickMessage(TextFormat::RED."此用户名摄政敏感\n\n出错了");
+        }
     }
 }
