@@ -20,6 +20,11 @@ class NoSteve extends PluginBase implements Listener
         $this->getLogger()->info(TextFormat::AQUA."NoSteve Plugin is Enable");
     }
 
+    public function onDisable()
+    {
+        $this->getServer()->getLogger()->info(TextFormat::AQUA."NoSteve Plugin is Disable");
+    }
+
     public function onJoin(PlayerPreLoginEvent $event)
     {
         if (strtolower($event->getPlayer()->getName()) === 'steve')
@@ -34,4 +39,5 @@ class NoSteve extends PluginBase implements Listener
             $event->setKickMessage(TextFormat::RED."你使用了违规名称\n\n出错了");
         }
     }
+
 }
