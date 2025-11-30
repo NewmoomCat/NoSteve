@@ -1,6 +1,6 @@
 name: NoSteve
 main: NoSteve
-version: 6
+version: 7
 api:
 - 2.0.0
 - 2.1.0
@@ -17,3 +17,4 @@ api:
 - 3.0.0-ALPHA8
 
 description: 一个有效拦截Steve和见证人的插件
+
