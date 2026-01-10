@@ -14,17 +14,21 @@ use pocketmine\utils\TextFormat;
 
 class NoSteve extends PluginBase implements Listener
 {
+ 
+    /** @return void */
     public function onEnable()
     {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->getLogger()->info(TextFormat::AQUA."NoSteve Plugin is Enable");
     }
 
+    /** @return void */
     public function onDisable()
     {
         $this->getServer()->getLogger()->info(TextFormat::AQUA."NoSteve Plugin is Disable");
     }
 
+    /** @return void */
     public function onJoin(PlayerPreLoginEvent $event)
     {
         if (strtolower($event->getPlayer()->getName()) === 'steve')
